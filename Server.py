@@ -7,6 +7,8 @@ def main():
     try:
         #declaramos um objeto do tipo enlace com o nome "com". Essa é a camada inferior à aplicação. Observe que um parametro
         #para declarar esse objeto é o nome da porta.
+        endereco = 69
+        eop_esperado = b'\xAA\xBB\xCC\xDD'
         com4 = enlace('COM5')
         # Ativa comunicacao. Inicia os threads e a comunicação seiral 
         com4.enable()
@@ -18,49 +20,54 @@ def main():
         SaveImage = open(imageW, 'wb')
 
         BufferRx, nrx = com4.getData(15)
- 
-        print(BufferRx)
+        if int.from_bytes(BufferRx[0:1], "big") == endereco:
+            print(BufferRx)
 
-        txLen = BufferRx[10:11]
-        time.sleep(0.01)
-        com4.sendData(np.asarray(txLen))
-
-        PacksLen = int.from_bytes(txLen, "big")-1
-        print("Recebendo dados...")
-        num_pack = -1
-        num_pack_v = 0
-        while num_pack < PacksLen:
-            head, nRx = com4.getData(10)
-            txLen = int.from_bytes(head[5:6], "big")
-            print("txLen",txLen)
-
-            package, nRx = com4.getData(txLen)
-            eop, nRx = com4.getData(4)
-            print("EOP", eop)
-            num_pack = int.from_bytes(head[4:5], "big")
-            print("Pacote {}/{} Enviado:".format(num_pack, PacksLen),package)
+            txLen = BufferRx[10:11]
             time.sleep(0.01)
+            com4.sendData(np.asarray(txLen))
 
-            if num_pack == num_pack_v and eop == b'\xde\xee\xeeU':
-                num_pack_v += 1
-                com4.sendData(np.asarray(Datagrama(tipo="data", payload=b'\x01')))
-            else:
-                com4.sendData(np.asarray(Datagrama(tipo="data", payload=b'\x00')))
-            SaveImage.write(package)
+            PacksLen = int.from_bytes(txLen, "big")-1
+            print("Recebendo dados...")
+            num_pack = -1
+            num_pack_v = 0
+            while num_pack < PacksLen:
+                head, nRx = com4.getData(10)
+                txLen = int.from_bytes(head[5:6], "big")
+                print("txLen",txLen)
 
-        SaveImage.close()
-    
-        # Encerra comunicação
-        print("-------------------------")
-        print("Comunicação encerrada")
-        print("-------------------------")
-        com4.disable()        
+                package, nRx = com4.getData(txLen)
+                eop, nRx = com4.getData(4)
+                print("EOP", eop)
+                num_pack = int.from_bytes(head[4:5], "big")
+                print("Pacote {}/{} Enviado:".format(num_pack, PacksLen),package)
+                time.sleep(0.01)
+
+                if num_pack == num_pack_v and eop == eop_esperado:
+                    num_pack_v += 1
+                    com4.sendData(np.asarray(Datagrama(tipo=4, payload=b'\x01')))
+                else:
+                    com4.sendData(np.asarray(Datagrama(tipo=6, payload=b'\x00')))
+                SaveImage.write(package)
+
+            SaveImage.close()
         
+            # Encerra comunicação
+            print("-------------------------")
+            print("Comunicação encerrada")
+            print("-------------------------")
+            com4.disable()        
+        else:
+            print('não é pra mim não chefe')
+            com4.sendData(np.asarray(Datagrama(tipo=2)))
+            print("Fechei a conversa")
+            com4.disable()
+
     except Exception as erro:
         print("ops! :-\\")
         print(erro)
         com4.disable()        
 
-    #so roda o main quando for executado do terminal ... se for chamado dentro de outro modulo nao roda
-if __name__ == "__main__":
-    main()
+        #so roda o main quando for executado do terminal ... se for chamado dentro de outro modulo nao roda
+    if __name__ == "__main__":
+        main()

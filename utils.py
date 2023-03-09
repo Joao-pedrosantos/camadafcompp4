@@ -1,4 +1,4 @@
-def Datagrama(tipo="", npacks=00, num_pack=00, file_id=00, payload_len=00, error_pack=00, last_pack=00, crc=00, payload=b''):
+def Datagrama(tipo, npacks=00, num_pack=00, file_id=00, payload_len=00, error_pack=00, last_pack=00, crc=00, payload=b''):
     eop = b'\xAA\xBB\xCC\xDD'
 
     if tipo == 1:#é o handshake

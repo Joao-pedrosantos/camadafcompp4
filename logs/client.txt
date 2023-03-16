@@ -1,0 +1,284 @@
+Thu Mar 16 14:37:07 2023, envio, 1, 14 
+Thu Mar 16 14:37:08 2023, recebe, b'\x02', 14
+Thu Mar 16 14:37:08 2023, envio, 3, 128, 1, 141
+Thu Mar 16 14:37:09 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:09 2023, envio, 3, 128, 2, 141
+Thu Mar 16 14:37:09 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:09 2023, envio, 3, 128, 3, 141
+Thu Mar 16 14:37:09 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:09 2023, envio, 3, 128, 4, 141
+Thu Mar 16 14:37:10 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:10 2023, envio, 3, 128, 5, 141
+Thu Mar 16 14:37:10 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:10 2023, envio, 3, 128, 6, 141
+Thu Mar 16 14:37:10 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:10 2023, envio, 3, 128, 7, 141
+Thu Mar 16 14:37:11 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:11 2023, envio, 3, 128, 8, 141
+Thu Mar 16 14:37:11 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:11 2023, envio, 3, 128, 9, 141
+Thu Mar 16 14:37:11 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:11 2023, envio, 3, 128, 10, 141
+Thu Mar 16 14:37:12 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:12 2023, envio, 3, 128, 11, 141
+Thu Mar 16 14:37:12 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:12 2023, envio, 3, 128, 12, 141
+Thu Mar 16 14:37:12 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:12 2023, envio, 3, 128, 13, 141
+Thu Mar 16 14:37:12 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:12 2023, envio, 3, 128, 14, 141
+Thu Mar 16 14:37:13 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:13 2023, envio, 3, 128, 15, 141
+Thu Mar 16 14:37:13 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:13 2023, envio, 3, 128, 16, 141
+Thu Mar 16 14:37:13 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:13 2023, envio, 3, 128, 17, 141
+Thu Mar 16 14:37:14 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:14 2023, envio, 3, 128, 18, 141
+Thu Mar 16 14:37:14 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:14 2023, envio, 3, 128, 19, 141
+Thu Mar 16 14:37:14 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:14 2023, envio, 3, 128, 20, 141
+Thu Mar 16 14:37:15 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:15 2023, envio, 3, 128, 21, 141
+Thu Mar 16 14:37:15 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:15 2023, envio, 3, 128, 22, 141
+Thu Mar 16 14:37:15 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:15 2023, envio, 3, 128, 23, 141
+Thu Mar 16 14:37:15 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:15 2023, envio, 3, 128, 24, 141
+Thu Mar 16 14:37:16 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:16 2023, envio, 3, 128, 25, 141
+Thu Mar 16 14:37:16 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:16 2023, envio, 3, 128, 26, 141
+Thu Mar 16 14:37:16 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:16 2023, envio, 3, 128, 27, 141
+Thu Mar 16 14:37:17 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:17 2023, envio, 3, 128, 28, 141
+Thu Mar 16 14:37:17 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:17 2023, envio, 3, 128, 29, 141
+Thu Mar 16 14:37:17 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:17 2023, envio, 3, 128, 30, 141
+Thu Mar 16 14:37:18 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:18 2023, envio, 3, 128, 31, 141
+Thu Mar 16 14:37:18 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:18 2023, envio, 3, 128, 32, 141
+Thu Mar 16 14:37:18 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:18 2023, envio, 3, 128, 33, 141
+Thu Mar 16 14:37:18 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:18 2023, envio, 3, 128, 34, 141
+Thu Mar 16 14:37:19 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:19 2023, envio, 3, 128, 35, 141
+Thu Mar 16 14:37:19 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:19 2023, envio, 3, 128, 36, 141
+Thu Mar 16 14:37:19 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:19 2023, envio, 3, 128, 37, 141
+Thu Mar 16 14:37:19 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:19 2023, envio, 3, 128, 38, 141
+Thu Mar 16 14:37:20 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:20 2023, envio, 3, 128, 39, 141
+Thu Mar 16 14:37:20 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:20 2023, envio, 3, 128, 40, 141
+Thu Mar 16 14:37:20 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:20 2023, envio, 3, 128, 41, 141
+Thu Mar 16 14:37:20 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:20 2023, envio, 3, 128, 42, 141
+Thu Mar 16 14:37:21 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:21 2023, envio, 3, 128, 43, 141
+Thu Mar 16 14:37:21 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:21 2023, envio, 3, 128, 44, 141
+Thu Mar 16 14:37:21 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:21 2023, envio, 3, 128, 45, 141
+Thu Mar 16 14:37:22 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:22 2023, envio, 3, 128, 46, 141
+Thu Mar 16 14:37:22 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:22 2023, envio, 3, 128, 47, 141
+Thu Mar 16 14:37:22 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:22 2023, envio, 3, 128, 48, 141
+Thu Mar 16 14:37:22 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:22 2023, envio, 3, 128, 49, 141
+Thu Mar 16 14:37:23 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:23 2023, envio, 3, 128, 50, 141
+Thu Mar 16 14:37:23 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:23 2023, envio, 3, 128, 51, 141
+Thu Mar 16 14:37:23 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:23 2023, envio, 3, 128, 52, 141
+Thu Mar 16 14:37:23 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:23 2023, envio, 3, 128, 53, 141
+Thu Mar 16 14:37:24 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:24 2023, envio, 3, 128, 54, 141
+Thu Mar 16 14:37:24 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:24 2023, envio, 3, 128, 55, 141
+Thu Mar 16 14:37:24 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:24 2023, envio, 3, 128, 56, 141
+Thu Mar 16 14:37:25 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:25 2023, envio, 3, 128, 57, 141
+Thu Mar 16 14:37:25 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:25 2023, envio, 3, 128, 58, 141
+Thu Mar 16 14:37:25 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:25 2023, envio, 3, 128, 59, 141
+Thu Mar 16 14:37:26 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:26 2023, envio, 3, 128, 60, 141
+Thu Mar 16 14:37:26 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:26 2023, envio, 3, 128, 61, 141
+Thu Mar 16 14:37:26 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:26 2023, envio, 3, 128, 62, 141
+Thu Mar 16 14:37:26 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:26 2023, envio, 3, 128, 63, 141
+Thu Mar 16 14:37:27 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:27 2023, envio, 3, 128, 64, 141
+Thu Mar 16 14:37:27 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:27 2023, envio, 3, 128, 65, 141
+Thu Mar 16 14:37:27 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:27 2023, envio, 3, 128, 66, 141
+Thu Mar 16 14:37:27 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:27 2023, envio, 3, 128, 67, 141
+Thu Mar 16 14:37:28 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:28 2023, envio, 3, 128, 68, 141
+Thu Mar 16 14:37:28 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:28 2023, envio, 3, 128, 69, 141
+Thu Mar 16 14:37:28 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:28 2023, envio, 3, 128, 70, 141
+Thu Mar 16 14:37:28 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:28 2023, envio, 3, 128, 71, 141
+Thu Mar 16 14:37:29 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:29 2023, envio, 3, 128, 72, 141
+Thu Mar 16 14:37:29 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:29 2023, envio, 3, 128, 73, 141
+Thu Mar 16 14:37:29 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:29 2023, envio, 3, 128, 74, 141
+Thu Mar 16 14:37:29 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:29 2023, envio, 3, 128, 75, 141
+Thu Mar 16 14:37:30 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:30 2023, envio, 3, 128, 76, 141
+Thu Mar 16 14:37:30 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:30 2023, envio, 3, 128, 77, 141
+Thu Mar 16 14:37:30 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:30 2023, envio, 3, 128, 78, 141
+Thu Mar 16 14:37:31 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:31 2023, envio, 3, 128, 79, 141
+Thu Mar 16 14:37:31 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:31 2023, envio, 3, 128, 80, 141
+Thu Mar 16 14:37:31 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:31 2023, envio, 3, 128, 81, 141
+Thu Mar 16 14:37:31 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:31 2023, envio, 3, 128, 82, 141
+Thu Mar 16 14:37:31 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:31 2023, envio, 3, 128, 83, 141
+Thu Mar 16 14:37:32 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:32 2023, envio, 3, 128, 84, 141
+Thu Mar 16 14:37:32 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:32 2023, envio, 3, 128, 85, 141
+Thu Mar 16 14:37:32 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:32 2023, envio, 3, 128, 86, 141
+Thu Mar 16 14:37:32 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:32 2023, envio, 3, 128, 87, 141
+Thu Mar 16 14:37:33 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:33 2023, envio, 3, 128, 88, 141
+Thu Mar 16 14:37:33 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:33 2023, envio, 3, 128, 89, 141
+Thu Mar 16 14:37:33 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:33 2023, envio, 3, 128, 90, 141
+Thu Mar 16 14:37:34 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:34 2023, envio, 3, 128, 91, 141
+Thu Mar 16 14:37:34 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:34 2023, envio, 3, 128, 92, 141
+Thu Mar 16 14:37:34 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:34 2023, envio, 3, 128, 93, 141
+Thu Mar 16 14:37:35 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:35 2023, envio, 3, 128, 94, 141
+Thu Mar 16 14:37:35 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:35 2023, envio, 3, 128, 95, 141
+Thu Mar 16 14:37:35 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:35 2023, envio, 3, 128, 96, 141
+Thu Mar 16 14:37:36 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:36 2023, envio, 3, 128, 97, 141
+Thu Mar 16 14:37:36 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:36 2023, envio, 3, 128, 98, 141
+Thu Mar 16 14:37:36 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:36 2023, envio, 3, 128, 99, 141
+Thu Mar 16 14:37:37 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:37 2023, envio, 3, 128, 100, 141
+Thu Mar 16 14:37:37 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:37 2023, envio, 3, 128, 101, 141
+Thu Mar 16 14:37:37 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:37 2023, envio, 3, 128, 102, 141
+Thu Mar 16 14:37:37 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:37 2023, envio, 3, 128, 103, 141
+Thu Mar 16 14:37:38 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:38 2023, envio, 3, 128, 104, 141
+Thu Mar 16 14:37:38 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:38 2023, envio, 3, 128, 105, 141
+Thu Mar 16 14:37:38 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:38 2023, envio, 3, 128, 106, 141
+Thu Mar 16 14:37:38 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:38 2023, envio, 3, 128, 107, 141
+Thu Mar 16 14:37:39 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:39 2023, envio, 3, 128, 108, 141
+Thu Mar 16 14:37:39 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:39 2023, envio, 3, 128, 109, 141
+Thu Mar 16 14:37:39 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:39 2023, envio, 3, 128, 110, 141
+Thu Mar 16 14:37:40 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:40 2023, envio, 3, 128, 111, 141
+Thu Mar 16 14:37:40 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:40 2023, envio, 3, 128, 112, 141
+Thu Mar 16 14:37:40 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:40 2023, envio, 3, 128, 113, 141
+Thu Mar 16 14:37:40 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:40 2023, envio, 3, 128, 114, 141
+Thu Mar 16 14:37:41 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:41 2023, envio, 3, 128, 115, 141
+Thu Mar 16 14:37:41 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:41 2023, envio, 3, 128, 116, 141
+Thu Mar 16 14:37:41 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:41 2023, envio, 3, 128, 117, 141
+Thu Mar 16 14:37:42 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:42 2023, envio, 3, 128, 118, 141
+Thu Mar 16 14:37:42 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:42 2023, envio, 3, 128, 119, 141
+Thu Mar 16 14:37:42 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:42 2023, envio, 3, 128, 120, 141
+Thu Mar 16 14:37:43 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:43 2023, envio, 3, 128, 121, 141
+Thu Mar 16 14:37:43 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:43 2023, envio, 3, 128, 122, 141
+Thu Mar 16 14:37:43 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:43 2023, envio, 3, 128, 123, 141
+Thu Mar 16 14:37:44 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:44 2023, envio, 3, 128, 124, 141
+Thu Mar 16 14:37:44 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:44 2023, envio, 3, 128, 125, 141
+Thu Mar 16 14:37:44 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:44 2023, envio, 3, 128, 126, 141
+Thu Mar 16 14:37:44 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:44 2023, envio, 3, 128, 127, 141
+Thu Mar 16 14:37:45 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:45 2023, envio, 3, 128, 128, 141
+Thu Mar 16 14:37:45 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:45 2023, envio, 3, 128, 129, 141
+Thu Mar 16 14:37:45 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:45 2023, envio, 3, 128, 130, 141
+Thu Mar 16 14:37:46 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:46 2023, envio, 3, 128, 131, 141
+Thu Mar 16 14:37:46 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:46 2023, envio, 3, 128, 132, 141
+Thu Mar 16 14:37:46 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:46 2023, envio, 3, 128, 133, 141
+Thu Mar 16 14:37:46 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:46 2023, envio, 3, 128, 134, 141
+Thu Mar 16 14:37:47 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:47 2023, envio, 3, 128, 135, 141
+Thu Mar 16 14:37:47 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:47 2023, envio, 3, 128, 136, 141
+Thu Mar 16 14:37:47 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:47 2023, envio, 3, 128, 137, 141
+Thu Mar 16 14:37:48 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:48 2023, envio, 3, 128, 138, 141
+Thu Mar 16 14:37:48 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:48 2023, envio, 3, 128, 139, 141
+Thu Mar 16 14:37:48 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:48 2023, envio, 3, 128, 140, 141
+Thu Mar 16 14:37:49 2023, recebe, b'\x04', 14
+Thu Mar 16 14:37:49 2023, envio, 3, 119, 141, 141
+Thu Mar 16 14:37:49 2023, recebe, b'\x04', 14

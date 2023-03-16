@@ -19,11 +19,11 @@ def main():
     try:
         #declaramos um objeto do tipo enlace com o nome "com". Essa é a camada inferior à aplicação. Observe que um parametro
         #para declarar esse objeto é o nome da porta.
-        com3 = enlace('COM3')
+        com3 = enlace('/dev/ttyACM0')
         com3.enable()
         print("ON")
         imageR = "./imgs/image.png"
-        logclient = "./logs/client5.txt"
+        logclient = "./logs/client1.txt"
         logclient = open(logclient, "w")
     
 
@@ -42,13 +42,18 @@ def main():
             if validado == False:
                 pergunta=input("Você quer continuar (s/n):")
                 if pergunta == "s":
+                    print("Enviando pacote de início")
                     com3.sendData(np.asarray(Datagrama(tipo="1", npacks=numPck)))
+                    print("Enviei pacote de início")
                     logclient.write("{}, envio, 1, 14 \n".format(Tempolocal()))
-                    msgt1, nrx = com3.getData(14, 5)
+                    print("Escrevi o log")
+                    msgt1, nrx = com3.getData(14)
                     logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt1[0:1]), len(msgt1)))
+                    print("Escrevi o log 2")
                     validado = msgt1[0:1] == b'\x02'
-                    print("Validação:", validado)
+                    print("Validação: ", validado)
                 elif pergunta == 'n':
+                    print("Encerrando comunicação...")
                     logclient.close()
                     com3.disable()
                     exit()          
@@ -58,55 +63,73 @@ def main():
         cont = 1
  
         while cont <= numPck:
-            print("Enviando Pacote", cont)
+            #print("Enviando Pacote", cont)
             pacote = Datagrama(tipo="3", npacks=numPck, num_pack=cont, payload_len=len(packs[cont-1]), payload=packs[cont-1])
             com3.sendData(np.asarray(pacote))
             logclient.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), len(pacote), cont, numPck))
+            print(f"Escrevi o log de envio do pacote: {cont}")
             print("Pacote {}/{}".format(cont,numPck), pacote)
             start_timer1 = time.time()
             start_timer2 = time.time()
-            msgt4, nRx = com3.getData(14,5)
+            msgt4, nRx = com3.getData(14)
             logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt4[0:1]), len(msgt4)))
+            print(f"Escrevi o log de recebimento do pacote: {cont}. Estamos {cont/numPck*100}% prontos.")
 
             if msgt4[0:1] == b'\x04':
                 cont += 1
                 msgt4 = Datagrama(tipo = "6") 
+            
             else:
                 erro = True
-                print("[ERRO]")
+                print("Servidor acusou erro no pacote. Tentando reenviar...")
+
                 while erro == True:
-                    print(time.time()-start_timer2)
+
+
                     if time.time()-start_timer2 > 20:
                         com3.sendData(np.asarray(Datagrama(tipo="5")))
                         logclient.write("{}, envio, 5, 14 \n".format(Tempolocal()))
                         com3.disable()
-                        print("(╯ ͠° ͟ʖ ͡°)╯┻━┻")
-                        exit()                    
+                        print("Tempo de espera excedido. Encerrando comunicação...")
+                                           
                     elif time.time()-start_timer1 > 5:
-                        print("Tentando reconecção...")
+                        print("Tentando reconectar...")
                         pacote = Datagrama(tipo="3", npacks=numPck, num_pack=cont, payload_len=len(packs[cont-1]), payload=packs[cont-1])
                         com3.sendData(np.asarray(pacote))
                         logclient.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), len(pacote), cont, numPck))
+                        print(f"Tentei reenviar o pacote {cont}")
                         start_timer1 = time.time()
                     else:
-                        msgt6, nRx = com3.getData(14,4)
-                        logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt6[0:1]), len(msgt6)))
-                        if msgt6[0:1] == b'\x06':
-                            print("Corrigindo contador...")
-                            cont = int.from_bytes(msgt6[7:8], "big")
-                            pacote = Datagrama(tipo="3", npacks=numPck, num_pack=cont, payload_len=len(packs[cont-1]), payload=packs[cont-1])
-                            com3.sendData(np.asarray(pacote))
-                            logclient.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), len(pacote), cont, numPck))
-                            start_timer1 = time.time()
-                            start_timer2 = time.time()
-                            msgt4, nRx = com3.getData(14)
-                            logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt4[0:1]), len(msgt4)))
-                            
+                        pacote = Datagrama(tipo="3", npacks=numPck, num_pack=cont, payload_len=len(packs[cont-1]), payload=packs[cont-1])
+                        com3.sendData(np.asarray(pacote))
+                        logclient.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), len(pacote), cont, numPck))
+                        print(f"Tentei reenviar o pacote {cont}")
+                        if com3.rx.getIsEmpty() == False:
+                            msgt6, nRx = com3.getData(14)
+                            logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt6[0:1]), len(msgt6)))
+                       
+                            '''
+                            if msgt6[0:1] == b'\x06':
+                                print("Corrigindo contador...")
+                                cont = int.from_bytes(msgt6[7:8], "big")
+                                pacote = Datagrama(tipo="3", npacks=numPck, num_pack=cont, payload_len=len(packs[cont-1]), payload=packs[cont-1])
+                                com3.sendData(np.asarray(pacote))
+                                logclient.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), len(pacote), cont, numPck))
+                                start_timer1 = time.time()
+                                start_timer2 = time.time()
+                                msgt4, nRx = com3.getData(14)
+                                logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt4[0:1]), len(msgt4)))
+                    '''
                         
-                        if msgt4[0:1] == b'\x04':
-                            cont += 1
-                            erro = False
+                            if msgt6[0:1] == b'\x04':
+                                cont += 1
+                                print("ta certo")
+                                erro = False
 
+                        else:
+                            print("ainda ta zuado")
+                            print("Tentar de novo pq ninguem é de ferro")
+                            erro = True
 
 
 

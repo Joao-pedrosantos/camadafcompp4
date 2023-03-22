@@ -1,0 +1,289 @@
+Wed Mar 22 16:43:11 2023, recebe, b'\x01', 14
+Wed Mar 22 16:43:12 2023, envio, 2, 14 
+Wed Mar 22 16:43:12 2023, envio, 3, 128, 1, 141
+Wed Mar 22 16:43:14 2023, envio, 4, 14 
+Wed Mar 22 16:43:14 2023, envio, 4, 14 
+Wed Mar 22 16:43:14 2023, envio, 3, 128, 2, 141
+Wed Mar 22 16:43:15 2023, envio, 4, 14 
+Wed Mar 22 16:43:15 2023, envio, 3, 128, 3, 141
+Wed Mar 22 16:43:15 2023, envio, 4, 14 
+Wed Mar 22 16:43:15 2023, envio, 3, 128, 4, 141
+Wed Mar 22 16:43:15 2023, envio, 4, 14 
+Wed Mar 22 16:43:15 2023, envio, 3, 128, 5, 141
+Wed Mar 22 16:43:15 2023, envio, 4, 14 
+Wed Mar 22 16:43:15 2023, envio, 3, 128, 6, 141
+Wed Mar 22 16:43:16 2023, envio, 4, 14 
+Wed Mar 22 16:43:16 2023, envio, 3, 128, 7, 141
+Wed Mar 22 16:43:16 2023, envio, 4, 14 
+Wed Mar 22 16:43:16 2023, envio, 3, 128, 8, 141
+Wed Mar 22 16:43:16 2023, envio, 4, 14 
+Wed Mar 22 16:43:16 2023, envio, 3, 128, 9, 141
+Wed Mar 22 16:43:16 2023, envio, 4, 14 
+Wed Mar 22 16:43:16 2023, envio, 3, 128, 10, 141
+Wed Mar 22 16:43:17 2023, envio, 4, 14 
+Wed Mar 22 16:43:17 2023, envio, 3, 128, 11, 141
+Wed Mar 22 16:43:17 2023, envio, 4, 14 
+Wed Mar 22 16:43:17 2023, envio, 3, 128, 12, 141
+Wed Mar 22 16:43:17 2023, envio, 4, 14 
+Wed Mar 22 16:43:17 2023, envio, 3, 128, 13, 141
+Wed Mar 22 16:43:17 2023, envio, 4, 14 
+Wed Mar 22 16:43:17 2023, envio, 3, 128, 14, 141
+Wed Mar 22 16:43:17 2023, envio, 4, 14 
+Wed Mar 22 16:43:17 2023, envio, 3, 128, 15, 141
+Wed Mar 22 16:43:18 2023, envio, 4, 14 
+Wed Mar 22 16:43:18 2023, envio, 3, 128, 16, 141
+Wed Mar 22 16:43:18 2023, envio, 4, 14 
+Wed Mar 22 16:43:18 2023, envio, 3, 128, 17, 141
+Wed Mar 22 16:43:18 2023, envio, 4, 14 
+Wed Mar 22 16:43:18 2023, envio, 3, 128, 18, 141
+Wed Mar 22 16:43:18 2023, envio, 4, 14 
+Wed Mar 22 16:43:18 2023, envio, 3, 128, 19, 141
+Wed Mar 22 16:43:18 2023, envio, 4, 14 
+Wed Mar 22 16:43:18 2023, envio, 3, 128, 20, 141
+Wed Mar 22 16:43:19 2023, envio, 4, 14 
+Wed Mar 22 16:43:19 2023, envio, 3, 128, 21, 141
+Wed Mar 22 16:43:19 2023, envio, 4, 14 
+Wed Mar 22 16:43:19 2023, envio, 3, 128, 22, 141
+Wed Mar 22 16:43:19 2023, envio, 4, 14 
+Wed Mar 22 16:43:19 2023, envio, 3, 128, 23, 141
+Wed Mar 22 16:43:19 2023, envio, 4, 14 
+Wed Mar 22 16:43:19 2023, envio, 3, 128, 24, 141
+Wed Mar 22 16:43:20 2023, envio, 4, 14 
+Wed Mar 22 16:43:20 2023, envio, 3, 128, 25, 141
+Wed Mar 22 16:43:20 2023, envio, 4, 14 
+Wed Mar 22 16:43:20 2023, envio, 3, 128, 26, 141
+Wed Mar 22 16:43:21 2023, envio, 4, 14 
+Wed Mar 22 16:43:21 2023, envio, 3, 128, 27, 141
+Wed Mar 22 16:43:21 2023, envio, 4, 14 
+Wed Mar 22 16:43:21 2023, envio, 3, 128, 28, 141
+Wed Mar 22 16:43:21 2023, envio, 4, 14 
+Wed Mar 22 16:43:21 2023, envio, 3, 128, 29, 141
+Wed Mar 22 16:43:23 2023, envio, 4, 14 
+Wed Mar 22 16:43:25 2023, envio, 4, 14 
+Wed Mar 22 16:43:27 2023, envio, 4, 14 
+Wed Mar 22 16:43:29 2023, envio, 4, 14 
+Wed Mar 22 16:43:30 2023, envio, 4, 14 
+Wed Mar 22 16:43:30 2023, envio, 3, 128, 30, 141
+Wed Mar 22 16:43:31 2023, envio, 4, 14 
+Wed Mar 22 16:43:31 2023, envio, 3, 128, 31, 141
+Wed Mar 22 16:43:31 2023, envio, 4, 14 
+Wed Mar 22 16:43:31 2023, envio, 3, 128, 32, 141
+Wed Mar 22 16:43:31 2023, envio, 4, 14 
+Wed Mar 22 16:43:31 2023, envio, 3, 128, 33, 141
+Wed Mar 22 16:43:31 2023, envio, 4, 14 
+Wed Mar 22 16:43:31 2023, envio, 3, 128, 34, 141
+Wed Mar 22 16:43:32 2023, envio, 4, 14 
+Wed Mar 22 16:43:32 2023, envio, 3, 128, 35, 141
+Wed Mar 22 16:43:32 2023, envio, 4, 14 
+Wed Mar 22 16:43:32 2023, envio, 3, 128, 36, 141
+Wed Mar 22 16:43:32 2023, envio, 4, 14 
+Wed Mar 22 16:43:32 2023, envio, 3, 128, 37, 141
+Wed Mar 22 16:43:32 2023, envio, 4, 14 
+Wed Mar 22 16:43:32 2023, envio, 3, 128, 38, 141
+Wed Mar 22 16:43:33 2023, envio, 4, 14 
+Wed Mar 22 16:43:33 2023, envio, 3, 128, 39, 141
+Wed Mar 22 16:43:33 2023, envio, 4, 14 
+Wed Mar 22 16:43:33 2023, envio, 3, 128, 40, 141
+Wed Mar 22 16:43:33 2023, envio, 4, 14 
+Wed Mar 22 16:43:33 2023, envio, 3, 128, 41, 141
+Wed Mar 22 16:43:33 2023, envio, 4, 14 
+Wed Mar 22 16:43:33 2023, envio, 3, 128, 42, 141
+Wed Mar 22 16:43:34 2023, envio, 4, 14 
+Wed Mar 22 16:43:34 2023, envio, 3, 128, 43, 141
+Wed Mar 22 16:43:34 2023, envio, 4, 14 
+Wed Mar 22 16:43:34 2023, envio, 3, 128, 44, 141
+Wed Mar 22 16:43:34 2023, envio, 4, 14 
+Wed Mar 22 16:43:34 2023, envio, 3, 128, 45, 141
+Wed Mar 22 16:43:35 2023, envio, 4, 14 
+Wed Mar 22 16:43:35 2023, envio, 3, 128, 46, 141
+Wed Mar 22 16:43:35 2023, envio, 4, 14 
+Wed Mar 22 16:43:35 2023, envio, 3, 128, 47, 141
+Wed Mar 22 16:43:35 2023, envio, 4, 14 
+Wed Mar 22 16:43:35 2023, envio, 3, 128, 48, 141
+Wed Mar 22 16:43:35 2023, envio, 4, 14 
+Wed Mar 22 16:43:36 2023, envio, 3, 128, 49, 141
+Wed Mar 22 16:43:36 2023, envio, 4, 14 
+Wed Mar 22 16:43:36 2023, envio, 3, 128, 50, 141
+Wed Mar 22 16:43:36 2023, envio, 4, 14 
+Wed Mar 22 16:43:36 2023, envio, 3, 128, 51, 141
+Wed Mar 22 16:43:36 2023, envio, 4, 14 
+Wed Mar 22 16:43:36 2023, envio, 3, 128, 52, 141
+Wed Mar 22 16:43:36 2023, envio, 4, 14 
+Wed Mar 22 16:43:36 2023, envio, 3, 128, 53, 141
+Wed Mar 22 16:43:37 2023, envio, 4, 14 
+Wed Mar 22 16:43:37 2023, envio, 3, 128, 54, 141
+Wed Mar 22 16:43:37 2023, envio, 4, 14 
+Wed Mar 22 16:43:37 2023, envio, 3, 128, 55, 141
+Wed Mar 22 16:43:37 2023, envio, 4, 14 
+Wed Mar 22 16:43:37 2023, envio, 3, 128, 56, 141
+Wed Mar 22 16:43:38 2023, envio, 4, 14 
+Wed Mar 22 16:43:38 2023, envio, 3, 128, 57, 141
+Wed Mar 22 16:43:38 2023, envio, 4, 14 
+Wed Mar 22 16:43:38 2023, envio, 3, 128, 58, 141
+Wed Mar 22 16:43:38 2023, envio, 4, 14 
+Wed Mar 22 16:43:38 2023, envio, 3, 128, 59, 141
+Wed Mar 22 16:43:38 2023, envio, 4, 14 
+Wed Mar 22 16:43:39 2023, envio, 3, 128, 60, 141
+Wed Mar 22 16:43:39 2023, envio, 4, 14 
+Wed Mar 22 16:43:39 2023, envio, 3, 128, 61, 141
+Wed Mar 22 16:43:39 2023, envio, 4, 14 
+Wed Mar 22 16:43:39 2023, envio, 3, 128, 62, 141
+Wed Mar 22 16:43:39 2023, envio, 4, 14 
+Wed Mar 22 16:43:39 2023, envio, 3, 128, 63, 141
+Wed Mar 22 16:43:39 2023, envio, 4, 14 
+Wed Mar 22 16:43:39 2023, envio, 3, 128, 64, 141
+Wed Mar 22 16:43:40 2023, envio, 4, 14 
+Wed Mar 22 16:43:40 2023, envio, 3, 128, 65, 141
+Wed Mar 22 16:43:40 2023, envio, 4, 14 
+Wed Mar 22 16:43:40 2023, envio, 3, 128, 66, 141
+Wed Mar 22 16:43:40 2023, envio, 4, 14 
+Wed Mar 22 16:43:40 2023, envio, 3, 128, 67, 141
+Wed Mar 22 16:43:40 2023, envio, 4, 14 
+Wed Mar 22 16:43:40 2023, envio, 3, 128, 68, 141
+Wed Mar 22 16:43:41 2023, envio, 4, 14 
+Wed Mar 22 16:43:41 2023, envio, 3, 128, 69, 141
+Wed Mar 22 16:43:41 2023, envio, 4, 14 
+Wed Mar 22 16:43:41 2023, envio, 3, 128, 70, 141
+Wed Mar 22 16:43:42 2023, envio, 4, 14 
+Wed Mar 22 16:43:42 2023, envio, 3, 128, 71, 141
+Wed Mar 22 16:43:42 2023, envio, 4, 14 
+Wed Mar 22 16:43:42 2023, envio, 3, 128, 72, 141
+Wed Mar 22 16:43:42 2023, envio, 4, 14 
+Wed Mar 22 16:43:42 2023, envio, 3, 128, 73, 141
+Wed Mar 22 16:43:42 2023, envio, 4, 14 
+Wed Mar 22 16:43:42 2023, envio, 3, 128, 74, 141
+Wed Mar 22 16:43:43 2023, envio, 4, 14 
+Wed Mar 22 16:43:43 2023, envio, 3, 128, 75, 141
+Wed Mar 22 16:43:43 2023, envio, 4, 14 
+Wed Mar 22 16:43:43 2023, envio, 3, 128, 76, 141
+Wed Mar 22 16:43:43 2023, envio, 4, 14 
+Wed Mar 22 16:43:43 2023, envio, 3, 128, 77, 141
+Wed Mar 22 16:43:44 2023, envio, 4, 14 
+Wed Mar 22 16:43:44 2023, envio, 3, 128, 78, 141
+Wed Mar 22 16:43:44 2023, envio, 4, 14 
+Wed Mar 22 16:43:44 2023, envio, 3, 128, 79, 141
+Wed Mar 22 16:43:44 2023, envio, 4, 14 
+Wed Mar 22 16:43:44 2023, envio, 3, 128, 80, 141
+Wed Mar 22 16:43:44 2023, envio, 4, 14 
+Wed Mar 22 16:43:44 2023, envio, 3, 128, 81, 141
+Wed Mar 22 16:43:45 2023, envio, 4, 14 
+Wed Mar 22 16:43:45 2023, envio, 3, 128, 82, 141
+Wed Mar 22 16:43:45 2023, envio, 4, 14 
+Wed Mar 22 16:43:45 2023, envio, 3, 128, 83, 141
+Wed Mar 22 16:43:46 2023, envio, 4, 14 
+Wed Mar 22 16:43:46 2023, envio, 3, 128, 84, 141
+Wed Mar 22 16:43:46 2023, envio, 4, 14 
+Wed Mar 22 16:43:46 2023, envio, 3, 128, 85, 141
+Wed Mar 22 16:43:46 2023, envio, 4, 14 
+Wed Mar 22 16:43:46 2023, envio, 3, 128, 86, 141
+Wed Mar 22 16:43:46 2023, envio, 4, 14 
+Wed Mar 22 16:43:46 2023, envio, 3, 128, 87, 141
+Wed Mar 22 16:43:47 2023, envio, 4, 14 
+Wed Mar 22 16:43:47 2023, envio, 3, 128, 88, 141
+Wed Mar 22 16:43:47 2023, envio, 4, 14 
+Wed Mar 22 16:43:47 2023, envio, 3, 128, 89, 141
+Wed Mar 22 16:43:47 2023, envio, 4, 14 
+Wed Mar 22 16:43:47 2023, envio, 3, 128, 90, 141
+Wed Mar 22 16:43:47 2023, envio, 4, 14 
+Wed Mar 22 16:43:47 2023, envio, 3, 128, 91, 141
+Wed Mar 22 16:43:47 2023, envio, 4, 14 
+Wed Mar 22 16:43:47 2023, envio, 3, 128, 92, 141
+Wed Mar 22 16:43:47 2023, envio, 4, 14 
+Wed Mar 22 16:43:47 2023, envio, 3, 128, 93, 141
+Wed Mar 22 16:43:48 2023, envio, 4, 14 
+Wed Mar 22 16:43:48 2023, envio, 3, 128, 94, 141
+Wed Mar 22 16:43:48 2023, envio, 4, 14 
+Wed Mar 22 16:43:48 2023, envio, 3, 128, 95, 141
+Wed Mar 22 16:43:48 2023, envio, 4, 14 
+Wed Mar 22 16:43:48 2023, envio, 3, 128, 96, 141
+Wed Mar 22 16:43:48 2023, envio, 4, 14 
+Wed Mar 22 16:43:48 2023, envio, 3, 128, 97, 141
+Wed Mar 22 16:43:49 2023, envio, 4, 14 
+Wed Mar 22 16:43:49 2023, envio, 3, 128, 98, 141
+Wed Mar 22 16:43:49 2023, envio, 4, 14 
+Wed Mar 22 16:43:49 2023, envio, 3, 128, 99, 141
+Wed Mar 22 16:43:49 2023, envio, 4, 14 
+Wed Mar 22 16:43:49 2023, envio, 3, 128, 100, 141
+Wed Mar 22 16:43:49 2023, envio, 4, 14 
+Wed Mar 22 16:43:49 2023, envio, 3, 128, 101, 141
+Wed Mar 22 16:43:50 2023, envio, 4, 14 
+Wed Mar 22 16:43:50 2023, envio, 3, 128, 102, 141
+Wed Mar 22 16:43:50 2023, envio, 4, 14 
+Wed Mar 22 16:43:50 2023, envio, 3, 128, 103, 141
+Wed Mar 22 16:43:50 2023, envio, 4, 14 
+Wed Mar 22 16:43:50 2023, envio, 3, 128, 104, 141
+Wed Mar 22 16:43:50 2023, envio, 4, 14 
+Wed Mar 22 16:43:50 2023, envio, 3, 128, 105, 141
+Wed Mar 22 16:43:51 2023, envio, 4, 14 
+Wed Mar 22 16:43:51 2023, envio, 3, 128, 106, 141
+Wed Mar 22 16:43:51 2023, envio, 4, 14 
+Wed Mar 22 16:43:51 2023, envio, 3, 128, 107, 141
+Wed Mar 22 16:43:51 2023, envio, 4, 14 
+Wed Mar 22 16:43:51 2023, envio, 3, 128, 108, 141
+Wed Mar 22 16:43:51 2023, envio, 4, 14 
+Wed Mar 22 16:43:51 2023, envio, 3, 128, 109, 141
+Wed Mar 22 16:43:51 2023, envio, 4, 14 
+Wed Mar 22 16:43:51 2023, envio, 3, 128, 110, 141
+Wed Mar 22 16:43:52 2023, envio, 4, 14 
+Wed Mar 22 16:43:52 2023, envio, 3, 128, 111, 141
+Wed Mar 22 16:43:52 2023, envio, 4, 14 
+Wed Mar 22 16:43:52 2023, envio, 3, 128, 112, 141
+Wed Mar 22 16:43:52 2023, envio, 4, 14 
+Wed Mar 22 16:43:52 2023, envio, 3, 128, 113, 141
+Wed Mar 22 16:43:53 2023, envio, 4, 14 
+Wed Mar 22 16:43:53 2023, envio, 3, 128, 114, 141
+Wed Mar 22 16:43:53 2023, envio, 4, 14 
+Wed Mar 22 16:43:53 2023, envio, 3, 128, 115, 141
+Wed Mar 22 16:43:53 2023, envio, 4, 14 
+Wed Mar 22 16:43:53 2023, envio, 3, 128, 116, 141
+Wed Mar 22 16:43:53 2023, envio, 4, 14 
+Wed Mar 22 16:43:53 2023, envio, 3, 128, 117, 141
+Wed Mar 22 16:43:53 2023, envio, 4, 14 
+Wed Mar 22 16:43:53 2023, envio, 3, 128, 118, 141
+Wed Mar 22 16:43:53 2023, envio, 4, 14 
+Wed Mar 22 16:43:53 2023, envio, 3, 128, 119, 141
+Wed Mar 22 16:43:54 2023, envio, 4, 14 
+Wed Mar 22 16:43:54 2023, envio, 3, 128, 120, 141
+Wed Mar 22 16:43:54 2023, envio, 4, 14 
+Wed Mar 22 16:43:54 2023, envio, 3, 128, 121, 141
+Wed Mar 22 16:43:54 2023, envio, 4, 14 
+Wed Mar 22 16:43:54 2023, envio, 3, 128, 122, 141
+Wed Mar 22 16:43:54 2023, envio, 4, 14 
+Wed Mar 22 16:43:54 2023, envio, 3, 128, 123, 141
+Wed Mar 22 16:43:55 2023, envio, 4, 14 
+Wed Mar 22 16:43:55 2023, envio, 3, 128, 124, 141
+Wed Mar 22 16:43:55 2023, envio, 4, 14 
+Wed Mar 22 16:43:55 2023, envio, 3, 128, 125, 141
+Wed Mar 22 16:43:55 2023, envio, 4, 14 
+Wed Mar 22 16:43:55 2023, envio, 3, 128, 126, 141
+Wed Mar 22 16:43:56 2023, envio, 4, 14 
+Wed Mar 22 16:43:56 2023, envio, 3, 128, 127, 141
+Wed Mar 22 16:43:56 2023, envio, 4, 14 
+Wed Mar 22 16:43:56 2023, envio, 3, 128, 128, 141
+Wed Mar 22 16:43:56 2023, envio, 4, 14 
+Wed Mar 22 16:43:56 2023, envio, 3, 128, 129, 141
+Wed Mar 22 16:43:56 2023, envio, 4, 14 
+Wed Mar 22 16:43:56 2023, envio, 3, 128, 130, 141
+Wed Mar 22 16:43:56 2023, envio, 4, 14 
+Wed Mar 22 16:43:56 2023, envio, 3, 128, 131, 141
+Wed Mar 22 16:43:57 2023, envio, 4, 14 
+Wed Mar 22 16:43:57 2023, envio, 3, 128, 132, 141
+Wed Mar 22 16:43:57 2023, envio, 4, 14 
+Wed Mar 22 16:43:57 2023, envio, 3, 128, 133, 141
+Wed Mar 22 16:43:57 2023, envio, 4, 14 
+Wed Mar 22 16:43:57 2023, envio, 3, 128, 134, 141
+Wed Mar 22 16:43:57 2023, envio, 4, 14 
+Wed Mar 22 16:43:57 2023, envio, 3, 128, 135, 141
+Wed Mar 22 16:43:57 2023, envio, 4, 14 
+Wed Mar 22 16:43:57 2023, envio, 3, 128, 136, 141
+Wed Mar 22 16:43:57 2023, envio, 4, 14 
+Wed Mar 22 16:43:57 2023, envio, 3, 128, 137, 141
+Wed Mar 22 16:43:58 2023, envio, 4, 14 
+Wed Mar 22 16:43:58 2023, envio, 3, 128, 138, 141
+Wed Mar 22 16:43:58 2023, envio, 4, 14 
+Wed Mar 22 16:43:58 2023, envio, 3, 128, 139, 141
+Wed Mar 22 16:43:58 2023, envio, 4, 14 
+Wed Mar 22 16:43:58 2023, envio, 3, 128, 140, 141
+Wed Mar 22 16:43:58 2023, envio, 4, 14 
+Wed Mar 22 16:43:58 2023, envio, 3, 119, 141, 141
+Wed Mar 22 16:43:58 2023, envio, 4, 14 

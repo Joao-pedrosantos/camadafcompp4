@@ -7,7 +7,7 @@ def main():
     try:
         #declaramos um objeto do tipo enlace com o nome "com". Essa é a camada inferior à aplicação. Observe que um parametro
         #para declarar esse objeto é o nome da porta.
-        com4 = enlace('COM4')
+        com4 = enlace('COM3')
         # Ativa comunicacao. Inicia os threads e a comunicação seiral 
         com4.enable()
         #Se chegamos até aqui, a comunicação foi aberta com sucesso. Faça um print para informar.
@@ -37,23 +37,42 @@ def main():
         while cont <= numPck:
             print("Recebendo Pacote",cont)
 
-            msgt3, nrx = com4.getData(10,2)
+            msgt3, nrx = com4.getData(10)
             totlen = nrx
 
             payload_len = int.from_bytes(msgt3[5:6], "big")
-            payload, nrx = com4.getData(payload_len,2)
+            payload, nrx = com4.getData(payload_len)
             totlen += nrx
-            eop, nrx = com4.getData(4,2)
+            eop, nrx = com4.getData(4)
             totlen += nrx
             logserver.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), totlen, cont, numPck))
             print("Pacote {}/{}".format(cont,numPck), payload)
             n_pack = int.from_bytes(msgt3[4:5], "big")
+            start_timer1 = time.time()
+            start_timer2 = time.time()
+            while com4.rx.getBufferLen() < 14 and cont != numPck:
+               # print("Tempo passado do último envio:",time.time()-start_timer2)
+                if time.time()-start_timer2 > 20:
+                    ocioso = True
+                    com4.sendData(np.asarray(Datagrama(tipo="5")))
+                    logserver.write("{}, envio, 5, 14 \n".format(Tempolocal()))
+                    print("it is what it is")
+                    com4.disable()
+                    exit()
+                elif time.time()-start_timer1 > 2:
+                    com4.sendData(np.asarray(Datagrama(tipo="4")))
+                    print("Ainda não recebi o pacote",cont)
+                    print("Manda ae cara pf")
+                    print("Pedindo pacote",cont)
+
+                    logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
+                    start_timer1 = time.time()
+                    erro = False
+         
             if msgt3[0:1] == b'\x03':
                 msgt3 = Datagrama(tipo="6")
                 if n_pack == cont:
                     if eop == b'\xFF\xAA\xFF\xAA':
-                        start_timer1 = time.time()
-                        start_timer2 = time.time()
                         cont += 1
                         com4.sendData(np.asarray(Datagrama(tipo="4")))
                         logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
@@ -65,21 +84,8 @@ def main():
                     time.sleep(0.1)
                     com4.sendData(np.asarray(Datagrama(tipo="6", last_pack=cont)))
                     logserver.write("{}, envio, 6, 14 \n".format(Tempolocal()))
-            else:
-                time.sleep(1)
-                print("Tempo passado do último envio:",time.time()-start_timer2)
-                if time.time()-start_timer2 > 20:
-                    ocioso = True
-                    com4.sendData(np.asarray(Datagrama(tipo="5")))
-                    logserver.write("{}, envio, 5, 14 \n".format(Tempolocal()))
-                    print("¯\_(ツ)_/¯")
-                    com4.disable()
-                    exit()
-                elif time.time()-start_timer1 > 2:
-                    com4.sendData(np.asarray(Datagrama(tipo="4")))
-                    logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
-                    start_timer1 = time.time()
-                    erro = False
+            #else:
+
 
         SaveImage.close()
         logserver.close()

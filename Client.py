@@ -71,9 +71,39 @@ def main():
             print("Pacote {}/{}".format(cont,numPck), pacote)
             start_timer1 = time.time()
             start_timer2 = time.time()
+            fudeu = 0
+            
+            if com3.rx.getBufferLen()<14:
+                print("Esperando resposta do servidor...")
+                while com3.rx.getBufferLen()<14:
+                    if time.time()-start_timer2 > 20:
+                        com3.sendData(np.asarray(Datagrama(tipo="5")))
+                        logclient.write("{}, envio, 5, 14 \n".format(Tempolocal()))
+                        com3.disable()
+                        print("Tempo de espera excedido. Encerrando comunicação...")
+                        exit()
+                    elif time.time()-start_timer1 > 5:
+                        fudeu +=1
+                        print("Tentando reconectar...")
+                        pacote = Datagrama(tipo="3", npacks=numPck, num_pack=cont, payload_len=len(packs[cont-1]), payload=packs[cont-1])
+                        com3.sendData(np.asarray(pacote))
+                        logclient.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), len(pacote), cont, numPck))
+                        print(f"Escrevi o log de envio do pacote: {cont}")
+                        print("Pacote {}/{}".format(cont,numPck), pacote)
+                        start_timer1 = time.time()
+                        start_timer2 = time.time()
+                        if fudeu == 3:
+                            print("Tentativas excedidas. Encerrando comunicação...")
+                            com3.disable()
+                            exit()
+                    else:
+                        pass
             msgt4, nRx = com3.getData(14)
+            
+
             logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt4[0:1]), len(msgt4)))
-            print(f"Escrevi o log de recebimento do pacote: {cont}. Estamos {cont/numPck*100}% prontos.")
+            print(f"Escrevi o log de recebimento do pacote: {cont}. Estamos {cont/numPck*100}% prontos.")     
+
 
             if msgt4[0:1] == b'\x04':
                 cont += 1
@@ -107,8 +137,8 @@ def main():
                         if com3.rx.getIsEmpty() == False:
                             msgt6, nRx = com3.getData(14)
                             logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt6[0:1]), len(msgt6)))
-                       
-                            '''
+                            
+                            
                             if msgt6[0:1] == b'\x06':
                                 print("Corrigindo contador...")
                                 cont = int.from_bytes(msgt6[7:8], "big")
@@ -119,7 +149,7 @@ def main():
                                 start_timer2 = time.time()
                                 msgt4, nRx = com3.getData(14)
                                 logclient.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt4[0:1]), len(msgt4)))
-                    '''
+                    
                         
                             if msgt6[0:1] == b'\x04':
                                 cont += 1

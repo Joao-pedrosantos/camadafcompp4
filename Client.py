@@ -2,6 +2,7 @@ from enlace import *
 import time
 import numpy as np
 from utils import *
+from crc import *
 
 
 # voce deverá descomentar e configurar a porta com através da qual ira fazer comunicaçao

@@ -2,6 +2,7 @@ from enlace import *
 import time
 import numpy as np
 from utils import *
+import zlib
 
 def main():
     try:
@@ -22,7 +23,7 @@ def main():
         while ocioso == True:
             print("Ocioso")
             msgt1, nrx = com4.getData(14)
-            logserver.write("{}, recebe, {}, {}\n".format(Tempolocal(),str(msgt1[0:1]), len(msgt1)))
+            logserver.write("{}, recebe, {}, {}\n".format(time.localtime(),str(msgt1[0:1]), len(msgt1)))
             if msgt1[0:1] == b'\x01':
                 if msgt1[2:3] == b'\x0F':
                     ocioso = False
@@ -30,7 +31,7 @@ def main():
         print("Estou vivo!!!")
 
         com4.sendData(np.asarray(Datagrama(tipo="2")))
-        logserver.write("{}, envio, 2, 14 \n".format(Tempolocal()))
+        logserver.write("{}, envio, 2, 14 \n".format(time.localtime()))
         cont = 1
         numPck = int.from_bytes(msgt1[3:4], "big")
 
@@ -45,7 +46,7 @@ def main():
             totlen += nrx
             eop, nrx = com4.getData(4)
             totlen += nrx
-            logserver.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), totlen, cont, numPck))
+            logserver.write("{}, envio, 3, {}, {}, {}\n".format(time.localtime(), totlen, cont, numPck))
             print("Pacote {}/{}".format(cont,numPck), payload)
             n_pack = int.from_bytes(msgt3[4:5], "big")
             start_timer1 = time.time()
@@ -55,7 +56,7 @@ def main():
                 if time.time()-start_timer2 > 20:
                     ocioso = True
                     com4.sendData(np.asarray(Datagrama(tipo="5")))
-                    logserver.write("{}, envio, 5, 14 \n".format(Tempolocal()))
+                    logserver.write("{}, envio, 5, 14 \n".format(time.localtime()))
                     print("it is what it is")
                     com4.disable()
                     exit()
@@ -65,7 +66,7 @@ def main():
                     print("Manda ae cara pf")
                     print("Pedindo pacote",cont)
 
-                    logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
+                    logserver.write("{}, envio, 4, 14 \n".format(time.localtime()))
                     start_timer1 = time.time()
                     erro = False
          
@@ -75,7 +76,7 @@ def main():
                     if eop == b'\xFF\xAA\xFF\xAA':
                         cont += 1
                         com4.sendData(np.asarray(Datagrama(tipo="4")))
-                        logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
+                        logserver.write("{}, envio, 4, 14 \n".format(time.localtime()))
                         SaveImage.write(payload)
                     else:
                         print("EOP errado: esparado:{}, recebido:{}".format(b'\xFF\xAA\xFF\xAA', eop))
@@ -83,7 +84,14 @@ def main():
                     print("[ERRO]Número de pacote errado: esparado:{}, recebido:{}".format(cont, n_pack))
                     time.sleep(0.1)
                     com4.sendData(np.asarray(Datagrama(tipo="6", last_pack=cont)))
-                    logserver.write("{}, envio, 6, 14 \n".format(Tempolocal()))
+                    logserver.write("{}, envio, 6, 14 \n".format(time.localtime()))
+                if msgt3[10:] == zlib.crc32(msgt3[11:len(msgt3-4)]):
+                    print("CRC correto")
+                else:
+                    print("CRC incorreto")
+                    print("Esperado: {}, recebido: {}".format(msgt3[10:], zlib.crc32(msgt3[11:len(msgt3-4)])))
+                    com4.sendData(np.asarray(Datagrama(tipo="5")))
+                    logserver.write("{}, envio, 5, 14 \n".format(time.localtime()))
             #else:
 
 

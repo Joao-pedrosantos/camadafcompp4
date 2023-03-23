@@ -8,7 +8,7 @@ def main():
     try:
         #declaramos um objeto do tipo enlace com o nome "com". Essa é a camada inferior à aplicação. Observe que um parametro
         #para declarar esse objeto é o nome da porta.
-        com4 = enlace('COM3')
+        com4 = enlace('/dev/ttyACM0')
         # Ativa comunicacao. Inicia os threads e a comunicação seiral 
         com4.enable()
         #Se chegamos até aqui, a comunicação foi aberta com sucesso. Faça um print para informar.
@@ -85,7 +85,7 @@ def main():
                     time.sleep(0.1)
                     com4.sendData(np.asarray(Datagrama(tipo="6", last_pack=cont)))
                     logserver.write("{}, envio, 6, 14 \n".format(time.localtime()))
-                if msgt3[10:] == zlib.crc32(msgt3[11:len(msgt3-4)]):
+                if msgt3[10] == zlib.crc32(msgt3[13:len(msgt3-4)]):
                     print("CRC correto")
                 else:
                     print("CRC incorreto")

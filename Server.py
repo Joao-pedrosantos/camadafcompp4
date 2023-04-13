@@ -2,6 +2,7 @@ from enlace import *
 import time
 import numpy as np
 from utils import *
+from fastcrc import crc16
 
 def main():
     try:
@@ -45,6 +46,11 @@ def main():
             totlen += nrx
             eop, nrx = com4.getData(4)
             totlen += nrx
+            crcof_1, nrx = com4.getData(1)
+            totlen += nrx
+            crcof_2, nrx = com4.getData(1)
+            totlen += nrx
+
             logserver.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), totlen, cont, numPck))
             print("Pacote {}/{}".format(cont,numPck), payload)
             n_pack = int.from_bytes(msgt3[4:5], "big")
@@ -73,10 +79,15 @@ def main():
                 msgt3 = Datagrama(tipo="6")
                 if n_pack == cont:
                     if eop == b'\xFF\xAA\xFF\xAA':
-                        cont += 1
-                        com4.sendData(np.asarray(Datagrama(tipo="4")))
-                        logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
-                        SaveImage.write(payload)
+                        calcular_crc = crc16.xmodem(payload)
+                        crc1 = int(str(calcular_crc)[:2])
+                        crc2 = int(str(calcular_crc)[2:])
+                        if crc1 == crcof_1 and crc2 == crcof_2:
+                            print("CRC correto")
+                            cont += 1
+                            com4.sendData(np.asarray(Datagrama(tipo="4")))
+                            logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
+                            SaveImage.write(payload)
                     else:
                         print("EOP errado: esparado:{}, recebido:{}".format(b'\xFF\xAA\xFF\xAA', eop))
                 else:

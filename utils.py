@@ -1,9 +1,13 @@
 import random
 import time
+from fastcrc import crc16
 
 
 def Datagrama(tipo="", npacks=00, num_pack=00, file_id=00, payload_len=00, error_pack=00, last_pack=00, crc=00, payload=b''):
     eop = b'\xFF\xAA\xFF\xAA'
+    crc_total = crc16.xmodem(payload)
+    crc1 = int(str(crc_total)[:2]).to_bytes(1, byteorder='big')
+    crc2 = int(str(crc_total)[2:]).to_bytes(1, byteorder='big')
     if tipo == "1":
         mensagem = [1, 00, 15, npacks, num_pack, file_id, error_pack, last_pack, crc, crc]
         mensagem = bytes(mensagem)
@@ -11,7 +15,7 @@ def Datagrama(tipo="", npacks=00, num_pack=00, file_id=00, payload_len=00, error
         mensagem += eop
 
     else:
-        mensagem = [int(tipo[0]), 00, 00, npacks, num_pack, payload_len, error_pack, last_pack, crc, crc]
+        mensagem = [int(tipo[0]), 00, 00, npacks, num_pack, payload_len, error_pack, last_pack, crc1, crc2]
         mensagem = bytes(mensagem)
         mensagem += payload
         mensagem += eop

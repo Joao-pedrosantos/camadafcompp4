@@ -46,10 +46,8 @@ def main():
             totlen += nrx
             eop, nrx = com4.getData(4)
             totlen += nrx
-            crcof_1, nrx = com4.getData(1)
-            totlen += nrx
-            crcof_2, nrx = com4.getData(1)
-            totlen += nrx
+            crcof_1 = int.from_bytes(msgt3[11:12], "big")
+            crcof_2 = int.from_bytes(msgt3[13:14], "big")
 
             logserver.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), totlen, cont, numPck))
             print("Pacote {}/{}".format(cont,numPck), payload)

@@ -13,20 +13,11 @@ def Datagrama(tipo="", npacks=00, num_pack=00, file_id=00, payload_len=00, error
         mensagem += eop
 
     else:
-        crc_total = crc16.xmodem(payload)
-        print("CRC total:", crc_total)
-        crc_total //= 100
-        if crc_total == 0:
-            crc_total = 10
-        lencr = len(str(crc_total))
-        crc1 = int(str(crc_total)[:lencr//2])
-        crc2 = int(str(crc_total)[lencr//2:])
-        print("CRC1:", crc1)
-        print("CRC2:", crc2)
-                
 
+        crc1, crc2 = cria_crc(payload)
         mensagem = [int(tipo[0]), 00, 00, npacks, num_pack, payload_len, error_pack, last_pack, crc1, crc2]
         mensagem = bytes(mensagem)
+        print("Mensagem:", mensagem)
         mensagem += payload
         mensagem += eop
         
@@ -38,3 +29,14 @@ def Pack(info):
 
 def Tempolocal():
     return time.asctime(time.localtime())
+
+
+def cria_crc(msg):
+    crc = crc16.xmodem(msg)
+    crc //= 10
+    if crc == 0:
+        crc = 10
+    lencr = len(str(crc))
+    crc1 = int(str(crc)[:lencr//2])
+    crc2 = int(str(crc)[lencr//2:])
+    return crc1, crc2

@@ -79,19 +79,14 @@ def main():
                 msgt3 = Datagrama(tipo="6")
                 if n_pack == cont:
                     if eop == b'\xFF\xAA\xFF\xAA':
-                        calcular_crc = crc16.xmodem(payload)
-                        crc1 = int(str(calcular_crc)[:2])
-                        crc2 = int(str(calcular_crc)[2:])
-             #           if crc1 == crcof_1 and crc2 == crcof_2:
-                        print("CRC correto")
+                        crc1, crc2 = crc16.xmodem(payload)
+                        print("CRC1: ", crc1)
+                        print("CRC2: ", crc2)
                         cont += 1
                         com4.sendData(np.asarray(Datagrama(tipo="4")))
                         logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
                         SaveImage.write(payload)
-              #      else:
-              #          print("CRC errado")
-              #          com4.sendData(np.asarray(Datagrama(tipo="6", last_pack=cont)))
-              #          logserver.write("{}, envio, 6, 14 \n".format(Tempolocal()))
+
                     else:
                         print("EOP errado: esparado:{}, recebido:{}".format(b'\xFF\xAA\xFF\xAA', eop))
                 else:

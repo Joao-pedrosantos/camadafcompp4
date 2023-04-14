@@ -13,19 +13,16 @@ def Datagrama(tipo="", npacks=00, num_pack=00, file_id=00, payload_len=00, error
         mensagem += eop
 
     else:
-        if payload_len > 0:
-                crc_total = crc16.xmodem(payload)
-                print("CRC total:", crc_total)
-                crc = crc_total.to_bytes(2, byteorder='big')
-                print("CRC:", crc)
-                lencr = len(str(crc_total))
-                crc1 = int(str(crc_total)[:lencr//2])
-                crc2 = int(str(crc_total)[lencr//2:])
-                print("CRC1:", crc1)
-                print("CRC2:", crc2)
-        else:
-            crc1 = 00
-            crc2 = 00
+        crc_total = crc16.xmodem(payload)
+        print("CRC total:", crc_total)
+        crc_total //= 100
+        if crc_total == 0:
+            crc_total = 10
+        lencr = len(str(crc_total))
+        crc1 = int(str(crc_total)[:lencr//2])
+        crc2 = int(str(crc_total)[lencr//2:])
+        print("CRC1:", crc1)
+        print("CRC2:", crc2)
                 
 
         mensagem = [int(tipo[0]), 00, 00, npacks, num_pack, payload_len, error_pack, last_pack, crc1, crc2]

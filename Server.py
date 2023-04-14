@@ -49,6 +49,8 @@ def main():
             crcof_1 = int.from_bytes(msgt3[11:12], "big")
             crcof_2 = int.from_bytes(msgt3[13:14], "big")
 
+
+
             logserver.write("{}, envio, 3, {}, {}, {}\n".format(Tempolocal(), totlen, cont, numPck))
             print("Pacote {}/{}".format(cont,numPck), payload)
             n_pack = int.from_bytes(msgt3[4:5], "big")
@@ -86,6 +88,10 @@ def main():
                             com4.sendData(np.asarray(Datagrama(tipo="4")))
                             logserver.write("{}, envio, 4, 14 \n".format(Tempolocal()))
                             SaveImage.write(payload)
+                        else:
+                            print("CRC errado")
+                            com4.sendData(np.asarray(Datagrama(tipo="6", last_pack=cont)))
+                            logserver.write("{}, envio, 6, 14 \n".format(Tempolocal()))
                     else:
                         print("EOP errado: esparado:{}, recebido:{}".format(b'\xFF\xAA\xFF\xAA', eop))
                 else:
